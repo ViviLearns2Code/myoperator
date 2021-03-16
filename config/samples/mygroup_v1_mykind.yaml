@@ -1,0 +1,16 @@
+apiVersion: mygroup.mydomain/v1
+kind: MyKind
+metadata:
+  name: mykind-sample
+spec:
+  # Add fields here
+  nrPods: 11
+  podTemplate:
+    spec:
+      containers:
+        - name: web
+          image: nginx
+          ports:
+            - name: web
+              containerPort: 80
+              protocol: TCP

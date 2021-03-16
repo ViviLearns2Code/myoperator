@@ -1,0 +1,19 @@
+domain: mydomain
+layout: go.kubebuilder.io/v3
+projectName: myoperator
+repo: mydomain/myproject
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: mydomain
+  group: mygroup
+  kind: MyKind
+  path: mydomain/myproject/api/v1
+  version: v1
+  webhooks:
+    defaulting: true
+    validation: true
+    webhookVersion: v1
+version: "3"
